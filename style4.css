@@ -1,0 +1,8 @@
+p.center{
+    text-align: center;
+    color: red;
+}
+
+p.centerlarge{
+    font-size: 300%;
+}
