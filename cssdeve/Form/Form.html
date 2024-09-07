@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Example</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFCC;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #FFFFCC;
+    border: 1px solid #999;
+    padding: 20px;
+    width: 200px;
+    margin: 0 auto;
+}
+input[type="text"],
+textarea {
+    width: 75%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-group label,
+.radio-group label {
+    display: flexbox;
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <form class="form-container">
+        <label for="family-name">Family name:</label>
+        <input type="text" id="family-name" name="family-name" placeholder="Family name"><br>
+
+        <label for="other-name">Other name:</label>
+        <input type="text" id="other-name" name="other-name" placeholder="Other names"><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Address"><br>
+
+        <label for="suburb">Suburb:</label>
+        <input type="text" id="suburb" name="suburb" placeholder="Vic (drop down menu)">
+
+        <label for="state-territory">State/Territory:</label>
+        <input type="text" id="state-territory" name="state-territory">
+         <br>
+        <label>Course Info On:</label>
+            <label><input type="checkbox" name="course-info" value="engineering"> Engineering</label><br>
+            <label><input type="checkbox" name="course-info" value="it"> IT</label><br>
+            <label><input type="checkbox" name="course-info" value="law"> Law</label><br>
+            <label><input type="checkbox" name="course-info" value="medicine"> Medicine</label><br>
+            <label><input type="checkbox" name="course-info" value="nursing"> Nursing</label><br>
+        
+          <br>
+        <label>Degree:</label>
+            <label><input type="radio" name="degree" value="diploma"> Diploma</label><br>
+            <label><input type="radio" name="degree" value="degree"> Degree</label><br>
+            <label><input type="radio" name="degree" value="honours"> Honours</label><br>
+            <label><input type="radio" name="degree" value="masters"> Masters</label><br>
+            <label><input type="radio" name="degree" value="phd"> PhD</label><br>
+        
+          <br>
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments"></textarea>
+        <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear Form">
+    </form>
+</body>
+</html>
