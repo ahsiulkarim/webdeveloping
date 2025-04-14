@@ -1,0 +1,159 @@
+/* styles.css */
+
+/* Basic body reset and styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFCC; /* Light yellow background for the page */
+    /* CRITICAL: Remove default body margin and padding */
+    margin: 0;
+    padding: 0;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Form container styling */
+.form-container {
+    background-color: #FFFFE0; /* Slightly different yellow for the form area */
+    /* CRITICAL: Apply border to all sides */
+    border: 3px solid black;
+    /* CRITICAL: Include padding and border in the element's total width/height */
+    box-sizing: border-box;
+    /* CRITICAL: Make the container take up the full width */
+    width: 100%;
+    /* Add padding inside the container so content isn't touching the border */
+    padding: 25px;
+    /* Add margin only to the top and bottom, not left/right */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    /* Removed max-width to allow full stretch */
+    /* Optional: Add a subtle shadow */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style labels to appear above inputs */
+label {
+    display: block; /* Make labels take full width */
+    margin-bottom: 5px; /* Space below label */
+    font-weight: bold;
+    color: #333; /* Darker text color for labels */
+}
+
+/* Style text inputs, select dropdown, and textarea */
+input[type="text"],
+select,
+textarea {
+    width: 100%; /* Make inputs fill container width */
+    padding: 8px; /* Comfortable padding inside inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #555; /* Darker border for inputs */
+    background-color: #fff;
+    /* CRITICAL: Ensure padding/border are included in the 100% width calculation */
+    box-sizing: border-box;
+    font-size: 1em; /* Ensure consistent font size */
+    /* removed border-radius for older look */
+}
+
+/* Style fieldsets for grouping related controls */
+.form-group {
+    border: 1px solid #ccc; /* Lighter border for visual grouping */
+    padding: 15px; /* Padding inside fieldset */
+    margin-top: 10px; /* Space above fieldset */
+    margin-bottom: 20px; /* Space below fieldset */
+    background-color: #FFFFF0; /* Slightly different background inside fieldset */
+}
+
+/* Style legends within fieldsets */
+.form-group legend {
+    font-weight: bold;
+    padding: 0 5px; /* Add horizontal padding around legend text */
+    margin-bottom: 10px; /* Space below legend */
+    color: #333;
+}
+
+/* Style labels within fieldsets (for checkboxes/radios) */
+.form-group label {
+    display: block; /* Ensure each option is on its own line */
+    font-weight: normal; /* Normal weight for options */
+    margin-bottom: 8px; /* Space between options */
+    color: #000; /* Standard text color */
+}
+
+/* Ensure checkbox/radio inputs align nicely with their labels */
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
+    margin-right: 8px; /* Space between input and label text */
+    vertical-align: middle; /* Align input vertically with text */
+    /* Make radios/checkboxes slightly larger if desired */
+    width: auto; /* Override the 100% width from the general input rule */
+    transform: scale(1.1); /* Optional: makes them slightly bigger */
+}
+
+/* Container for the submit/reset buttons */
+.button-container {
+    text-align: center; /* Center buttons within the container */
+    margin-top: 25px; /* Extra space above the buttons */
+    padding-top: 10px; /* Padding above buttons */
+}
+
+/* Style submit and reset buttons */
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px; /* Padding inside buttons */
+    border: 1px solid #333; /* Visible border */
+    background-color: #ddd; /* Grey background */
+    color: #000; /* Black text */
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px 10px; /* Add margin around buttons for spacing */
+    /* removed border-radius */
+    font-weight: bold;
+}
+
+/* Hover effect for buttons */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #ccc; /* Slightly darker on hover */
+    border-color: #000;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+    .form-container {
+        /* Reduce padding on small screens */
+        padding: 15px;
+        /* Reduce vertical margins on small screens */
+        margin-top: 10px;
+        margin-bottom: 10px;
+        /* Borders and width remain the same (full width) */
+        border-width: 2px; /* Optionally make border thinner */
+    }
+
+    /* Adjust input padding for smaller screens */
+    input[type="text"],
+    select,
+    textarea {
+        padding: 6px;
+        font-size: 0.95em; /* Slightly smaller font in inputs */
+    }
+
+    /* Optionally stack buttons vertically */
+    input[type="submit"],
+    input[type="reset"] {
+         display: block; /* Stack buttons */
+         width: 80%; /* Make buttons wide but not full */
+         margin: 10px auto; /* Center stacked buttons */
+         padding: 12px 15px; /* Adjust padding */
+    }
+
+    .form-group {
+        padding: 10px; /* Reduce fieldset padding */
+    }
+
+     label {
+        font-size: 0.95em; /* Slightly smaller labels */
+     }
+}
